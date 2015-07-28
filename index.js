@@ -17,16 +17,20 @@ server.connection({
 });
 
 // Any other dependencies 
-var plugins = [{
+var plugins = [
+  {
+    register: require('./routes/users.js') },
+
   //require mongoDB
-  register: require('hapi-mongodb'),
-  options: {
-    url: 'mongodb://127.0.0.1:27017/hapi-twitter',
-    settings: {
-      db: {
-        native_parser: false
+  {
+    register: require('hapi-mongodb'),
+    options: {
+      url: 'mongodb://127.0.0.1:27017/hapi-twitter',
+      settings: {
+        db: {
+          native_parser: false
+        }
       }
-    }
   }
 }];
 
