@@ -28,6 +28,15 @@ server.views({
 var plugins = [
   { register: require('./routes/static-pages.js') },
   { register: require('./routes/users.js') },
+  { register: require('./routes/sessions.js') },
+  { register: require('yar'),
+    options:{
+      cookieOptions: {
+        password: 'asasdasd',
+        isSecure: false// we are not going to use https, yet, for development
+      }
+    }
+  },
 
   //require mongoDB
   {
