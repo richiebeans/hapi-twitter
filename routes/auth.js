@@ -11,7 +11,7 @@ module.exports = {};
       var cookie = request.session.get('hapi_twitter_session');
       
       if (!cookie) {
-        return callback({ authenticated: false, "message": "Unauthorized" });
+        return callback({ authenticated: false, message: "No Beuno" });
       }
 
       var session_id = cookie.session_id;
@@ -23,7 +23,7 @@ module.exports = {};
         function(err, session){
     // 3. return true /false
         if (!session) {
-          return callback({ authenticated: false});
+          return callback({ authenticated: false, message: "No Beuno"});
         }
          
          callback({ authenticated: true, user_id: session.user_id}); 

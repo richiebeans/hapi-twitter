@@ -38,6 +38,8 @@ $(document).ready(function(){
     //prevent form from redirecting
     event.preventDefault();
 
+    console.log("working")
+
     var si_password = $('#si_password');
     var si_username = $('#si_username');
     //Sign in
@@ -54,15 +56,9 @@ $(document).ready(function(){
       xhrFields: {
         withCredentials: true
       },
-      success: function(response){
-        if (response.authenticated) {
-          window.location.href = "posts";
-          console.log(response)
-        }
-      },
-      error: function(xhr, status, error){
-        console.log(xhr.responseText);
-      }
-    });
+       success: function(response){
+    console.log("create session / logged in", response);
+  }
+});
   });
 });
