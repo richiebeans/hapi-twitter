@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="public/application.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Roboto|Lobster|Dosis">
+  <link rel="stylesheet" type="text/css" href="public/custom.css"></link>
+
+</head>
+<body>
+  <div class="global-nav">
+  <img src="/public/assets/twitter1.png">
+    <div class="container col-lg-4 col-lg-offset-4">
+      <h3>Join Twitter today.</h3>
+      <form id="signup">
+        <input type="text" class="form-control" id="name" placeholder="Full name">
+        <input type="text" class="form-control" id="email" placeholder="Email">
+        <input type="password" class="form-control" id="password" placeholder="Password">
+        <input type="text" class="form-control" id="username" placeholder="Username">
+         <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Sign up</button>
+      </form>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Tailor Twitter based on my recent website visits. <a href="#">Learn more.</a>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="dropdown col-lg-offset-9">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Have an account? <b>Log in</b> 
+        <span class="caret"></span>
+      </button>
+
+    <ul class="dropdown-menu col-lg-9" aria-labelledby="dropdownMenu1">
+      <div class="dropdown-wrapper"> 
+        <fieldset>
+          <div class="textbox">
+            <label class="username"><span>Username</span>
+                <input class="js-username-field" id="si_username" type="text" name="session[username_or_email]" autocomplete="on">
+            </label>
+            <label class="password"><span>Password</span>
+              <input class="js-password-field" id="si_password" type="password" value="" name="session[password]">
+            </label>
+          </div>
+          <div class="subchck">
+            <button type="submit" class="btn submit down-button" id="log-in"><b>Log in</b></button>
+            <label class="remember">
+              <input type="checkbox" id="rme" checked="checked"><span>Remember me</span>
+            </label>
+          </div>
+        </fieldset>
+          <div class="footer"></div>
+            <p class="footer-links">
+              <a class="forgot" href="#">Forgot password?</a><br>
+              <a class="mobile has-sms" href="#">Already using Twitter via text message?</a>
+            </p>
+       </div>     
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
